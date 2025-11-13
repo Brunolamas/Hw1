@@ -8,12 +8,15 @@ from plotly.subplots import make_subplots
 
 st.set_page_config(page_title="Quality Anomaly Dashboard", layout="wide")
 st.title("🟢 Quality (QMJ) Anomaly — Interactive Proof (FIXED)")
-st.subheader("Bruno Lombardo Lamas Alvarado A01644369
-Damián Urbieta Ramírez A01644801
-Armando Allende Sedano A0169476
-Darío Vázquez Romero A01644735
+st.markdown("""
+### Team Members
+Bruno Lombardo Lamas Alvarado A01644369  
+Damián Urbieta Ramírez A01644801  
+Armando Allende Sedano A0169476  
+Darío Vázquez Romero A01644735  
 José Alberto Alcaraz Baños A01067875
-")
+""")
+
 # === FIXED FUNCTIONS (Moved to the top) ===
 @st.cache_data(ttl=3600)
 def get_yahoo_data(tickers, period="10y"):
